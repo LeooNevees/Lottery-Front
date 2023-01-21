@@ -32,8 +32,7 @@
             <a
               class="nav-link"
               v-bind:class="[isSearch ? 'text-burble' : '']"
-              v-on:click="setMenu('search')"
-              >Buscar
+              v-on:click="setMenu('search')">Buscar
             </a>
           </router-link>
         </li>
