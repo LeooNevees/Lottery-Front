@@ -62,10 +62,13 @@
         </div>
         <div class="modal-body" id="textModal">
           {{ textModal }}
-          
+
           <div v-if="isSuccess">
             <p><span class="fw-bold">Status:</span> {{ message }}</p>
-            <p><span class="fw-bold">Números Sorteados:</span> {{ machineNumbers }}</p>
+            <p>
+              <span class="fw-bold">Números Sorteados:</span>
+              {{ machineNumbers }}
+            </p>
             <p><span class="fw-bold">Seus Números:</span> {{ yourNumbers }}</p>
             <p><span class="fw-bold">Ganhador:</span> {{ winner }}</p>
           </div>
@@ -119,7 +122,7 @@ export default defineComponent({
           this.machineNumbers = response.data.machineNumbers;
           this.yourNumbers = response.data.yourNumbers;
           this.winner = response.data.winner;
-          
+
           return true;
         })
         .catch((error) => {

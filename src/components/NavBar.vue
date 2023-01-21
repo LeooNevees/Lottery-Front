@@ -18,13 +18,23 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link to="/add" class="text-decoration-none">
-            <a class="nav-link" v-bind:class="[isAdd ? 'text-burble' : '']" v-on:click="setMenu('add')">Cadastrar </a>
+            <a
+              class="nav-link"
+              v-bind:class="[isAdd ? 'text-burble' : '']"
+              v-on:click="setMenu('add')"
+              >Cadastrar
+            </a>
           </router-link>
         </li>
 
         <li class="nav-item">
           <router-link to="/search" class="text-decoration-none">
-            <a class="nav-link" v-bind:class="[isSearch ? 'text-burble' : '']" v-on:click="setMenu('search')">Buscar </a>
+            <a
+              class="nav-link"
+              v-bind:class="[isSearch ? 'text-burble' : '']"
+              v-on:click="setMenu('search')"
+              >Buscar
+            </a>
           </router-link>
         </li>
       </ul>

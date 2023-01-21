@@ -72,7 +72,15 @@
         </div>
         <div class="modal-body" id="textModal">
           {{ textModal }}
-            <button v-if="isSuccess" class="btn btn-sm float-end" v-bind:class="[isCopied ? 'btn-success' : 'btn-primary']" v-on:click="copyText()" type="button">{{ isCopied ? 'Copiado' : 'Copiar' }}</button>
+          <button
+            v-if="isSuccess"
+            class="btn btn-sm float-end"
+            v-bind:class="[isCopied ? 'btn-success' : 'btn-primary']"
+            v-on:click="copyText()"
+            type="button"
+          >
+            {{ isCopied ? "Copiado" : "Copiar" }}
+          </button>
         </div>
       </div>
     </div>
@@ -102,11 +110,9 @@ export default defineComponent({
   methods: {
     copyText() {
       let text = this.ticket;
-      navigator.clipboard
-        .writeText(text)
-        .then(() => {
-          this.isCopied = true;
-        })
+      navigator.clipboard.writeText(text).then(() => {
+        this.isCopied = true;
+      });
     },
 
     validate() {
